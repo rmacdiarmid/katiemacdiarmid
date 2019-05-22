@@ -1,2 +1,2 @@
-# katiemacdiarmid
-Katie MacDiarmid Resume Site
+# dmcohort
+Disciplemaking Cohort Site

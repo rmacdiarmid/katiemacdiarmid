@@ -1,0 +1,351 @@
+/* myStyle.css */
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --red: #f00;
+  --cadetblue: #5f9ea0;
+  --dimgrey: #696969;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: var(--white);
+  color: var(--black);
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  color: var(--white);
+  background-color: var(--black);
+  padding: 20px;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  border: 0 solid var(--black);
+  margin-top: 50px;
+}
+
+h2 {
+  color: var(--black);
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 5px;
+}
+
+h3 {
+  display: inline-block;
+  color: var(--black);
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--white);
+  color: var(--dimgrey);
+  text-align: left;
+  font-weight: 400;
+  padding: 5px 20px 10px 20px;
+  line-height: 1.6em;
+  max-width: 800px;
+}
+
+a {
+  color: var(--cadetblue);
+  text-decoration: none;
+}
+
+ul {
+  font-family: 'Open sans', sans-serif;
+  color: var(--dimgrey);
+}
+
+li {
+  margin-top: 10px;
+}
+
+#logo {
+  margin-top: 50px;
+}
+
+#logo img {
+  width: 60%;
+}
+
+.subtitle {
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 10px;
+  margin: 0;
+  border: 0 solid var(--black);
+  font-style: italic;
+}
+
+.p-centered {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  [id='#logo'] img {
+    width: 80%;
+  }
+}
+
+.EFCAlogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: var(--black);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+.topnav a {
+  float: left;
+  color: var(--white);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: var(--cadetblue);
+  color: var(--white);
+}
+
+.topnav a.active {
+  background-color: var(--cadetblue);
+  color: var(--white);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.centerlodging {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* CONTENT WRAPPER */
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  flex-flow: row;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
+  border: solid0 red;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.content {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 0 var(--red);
+}
+@media (min-width: 768px) {
+  .content {
+    width: 45%;
+    min-width: 400px;
+  }
+}
+
+/* @media (max-width: 767px) {
+    .wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+} */
+
+/* BUTTONS    */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .button-containter {
+    flex-direction: column;
+  }
+}
+
+.button_1 {
+  order: 1;
+  background-color: var(--cadetblue);
+  border: solid 0 var(--dimgrey);
+  color: var(--black);
+  font-weight: 600;
+  font-size: 100%;
+  padding: 25px 30px;
+  text-align: center;
+  text-decoration: none;
+  /* margin: 4px 5%;*/
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  max-width: 300px;
+}
+
+.button_1 a {
+  color: var(--white);
+}
+
+.button_2 {
+  order: 2;
+  background-color: var(--red);
+  border: solid 0 var(--dimgrey);
+  color: var(--white);
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  /* margin: 4px 5%;*/
+  margin: auto;
+  cursor: pointer;
+  max-width: 300px;
+}
+
+.button_2 a {
+  color: var(--white);
+}
+
+.button:hover {
+  background-color: var(--cadetblue);
+  color: var(--white);
+}
+
+.fullimg {
+  Font-size: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/*DATES*/
+.wrapper-dates {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  border: 0 solid var(--black)0ff;
+}
+
+.flex-item {
+  flex: 25%;
+  list-style: none;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.with-bg-size {
+  background-image: url('https://odis.homeaway.com/odis/listing/19a58545-f914-4d34-81a7-ced829da4e68.f10.jpg');
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+
+.with-bg-size2 {
+  background-image: url('https://jackasstheology.com/wp-content/uploads/2019/05/hunt_TX.jpg');
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+
+/*PROFILES*/
+.profile-container {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/*.da-trainers {
+    order: 1;
+    flex-grow: 1;
+    width: 100%;
+    margin: auto;
+}*/
+
+.profile {
+  order: 1;
+  width: 33%;
+  margin-top: 0;
+  align-self: auto;
+  border: solid0 var(--red);
+}
+
+@media (min-width: 768px) {
+  .profile {
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .profile-containter {
+    flex-flow: column;
+    flex-direction: column;
+  }
+
+  .profile {
+    width: 800px;
+    margin-top: 0;
+    align-self: auto;
+  }
+}
+
+.red-text {
+  color: var(--red);
+  text-align: center;
+}
+
+.strong-text {
+  text-align: center;
+}
+
+.profileimg {
+  border-radius: 50%;
+}
+
+.testimonials {
+  font-style: italic;
+  font-weight: 300;
+}
