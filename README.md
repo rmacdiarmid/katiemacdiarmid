@@ -1,2 +1,2 @@
-# dmcohort
-Disciplemaking Cohort Site
+# Katie MacDiarmid
+Katie MacDiarmid Personal Resume
