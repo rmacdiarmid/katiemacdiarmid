@@ -1,11 +1,14 @@
 /* myStyle.css */
 
 :root {
-  --black: #000;
-  --white: #fff;
+  --black: #fff;
+  --white: #5f9ea0;
   --red: #f00;
   --cadetblue: #5f9ea0;
-  --dimgrey: #696969;
+  --dimgrey: #c6c6c6;
+  --green: #16d2a2;
+  --blue: #728091;
+  --lips: #f7acb2;
 }
 
 html,
@@ -22,17 +25,18 @@ h1 {
   background-color: var(--black);
   padding: 20px;
   text-align: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   border: 0 solid var(--black);
   margin-top: 50px;
 }
 
 h2 {
-  color: var(--black);
+  color: var(--white);
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 5px;
+  margin-top: 50px;
 }
 
 h3 {
@@ -49,7 +53,6 @@ h3 {
 
 p {
   font-family: 'Open Sans', sans-serif;
-  background-color: var(--white);
   color: var(--dimgrey);
   text-align: left;
   font-weight: 400;
@@ -65,11 +68,13 @@ a {
 
 ul {
   font-family: 'Open sans', sans-serif;
-  color: var(--dimgrey);
+  color: var(--white);
+  background-color: var(--black);
 }
 
 li {
   margin-top: 10px;
+  font-size: 14px;
 }
 
 #logo {
@@ -91,6 +96,10 @@ li {
 
 .p-centered {
   text-align: center;
+  background-color: solid var(--black);
+  color: var(--white);
+  padding: 30px;
+  border: 1px solid var(--white);
 }
 
 @media (max-width: 767px) {
@@ -112,7 +121,7 @@ li {
   overflow: hidden;
   background-color: var(--black);
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .topnav a {
@@ -121,17 +130,16 @@ li {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
 .topnav a:hover {
-  background-color: var(--cadetblue);
-  color: var(--white);
+  background-color: var(--dimgrey);
+  color: var(--black);
 }
 
 .topnav a.active {
-  background-color: var(--cadetblue);
-  color: var(--white);
+  background-color: var(--lips);
+  color: var(--black);
 }
 
 .center {
@@ -150,22 +158,61 @@ li {
 }
 
 
-/* CONTENT WRAPPER */
+/* HERO WRAPPER */
 
-.wrapper {
+.hero-wrapper {
   display: flex;
+  background-color: var(--black);
   width: 100%;
   flex-flow: row;
-  align-content: flex-start;
-  align-items: flex-start;
+  align-content: center;
+  align-items: center;
   justify-content: center;
-  border: solid0 red;
+  border: solid 1px red;
   flex-wrap: wrap;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Hero */
+.hero {
+  order: 1;
+  flex-grow: 1;
+  min-width: 350px;
+  background-image: url('http://jackasstheology.com/wp-content/uploads/2019/05/katie_macdiarmid_headshot.jpg');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-text {
+    order: 2;
+    flex-grow: 1;
+    border: 1px solid red;
+    min-height: 400px;
+    min-width: 425px;
+}
+
+@media (max-width: 768px) {
+  .hero-text {
+    margin-top: 100px;
+  }
+}
+
+.hero-text h1 {
+    margin-top: 0px;
+}
+
+.hero-text .p-centered {
+    margin: auto 5%;
+    min-width: 200px;
 }
 
 .content {
+  order: 3;
+  flex-grow: 1;
+  max-width: 400px;
+  text-align: center;
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
@@ -178,174 +225,254 @@ li {
   }
 }
 
-/* @media (max-width: 767px) {
-    .wrapper {
-        flex-direction: column;
-        justify-content: center;
-    }
-} */
 
-/* BUTTONS    */
-.button-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: flex-start;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
+/*SKILLS*/
+
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid var(--red);
 }
 
-@media (max-width: 767px) {
-  .button-containter {
-    flex-direction: column;
-  }
+.skills-wrapper ul {
+    background-color: var(--white);
 }
-
-.button_1 {
-  order: 1;
-  background-color: var(--cadetblue);
-  border: solid 0 var(--dimgrey);
-  color: var(--black);
-  font-weight: 600;
-  font-size: 100%;
-  padding: 25px 30px;
-  text-align: center;
-  text-decoration: none;
-  /* margin: 4px 5%;*/
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  cursor: pointer;
-  max-width: 300px;
-}
-
-.button_1 a {
-  color: var(--white);
-}
-
-.button_2 {
-  order: 2;
-  background-color: var(--red);
-  border: solid 0 var(--dimgrey);
-  color: var(--white);
-  padding: 15px 20px;
-  text-align: center;
-  text-decoration: none;
-  /* margin: 4px 5%;*/
-  margin: auto;
-  cursor: pointer;
-  max-width: 300px;
-}
-
-.button_2 a {
-  color: var(--white);
-}
-
-.button:hover {
-  background-color: var(--cadetblue);
-  color: var(--white);
-}
-
-.fullimg {
-  Font-size: 0;
-  margin: 0;
-  width: 100%;
-}
-
-/*DATES*/
 .wrapper-dates {
   padding: 0;
   margin: 0;
+  width: 100%;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  border: 0 solid var(--black)0ff;
+  align-content: center;
 }
 
+.skillstitle {
+    order: 0;
+    width: 100%;
+    background-color: var(--white);
+    color: white;
+}
+
+
 .flex-item {
-  flex: 25%;
+  flex: 10%;
   list-style: none;
-  margin-top: 10px;
+  min-width: 150px;
+  max-width: 250px;
+  margin: 5vh 3vw;
   padding: 10px;
   text-align: center;
   background-color: var(--white);
+  border: 1px solid var(--black);
+  color: var(--black);
+  text-align: center;
 }
 
-.with-bg-size {
-  background-image: url('https://odis.homeaway.com/odis/listing/19a58545-f914-4d34-81a7-ced829da4e68.f10.jpg');
-  width: 100%;
-  height: 400px;
-  background-position: center;
-  background-size: cover;
+.flex-item p {
+    text-align: center;
+    color: var(--black);
+    
 }
 
-.with-bg-size2 {
-  background-image: url('https://jackasstheology.com/wp-content/uploads/2019/05/hunt_TX.jpg');
-  width: 100%;
-  height: 400px;
-  background-position: center;
-  background-size: cover;
-}
 
-/*PROFILES*/
-.profile-container {
-  display: flex;
-  flex-flow: row;
-  align-items: flex-start;
-  justify-content: center;
-  align-content: flex-start;
-  flex-wrap: wrap;
-}
+/* LEADERSHIP */
 
-/*.da-trainers {
-    order: 1;
-    flex-grow: 1;
+
+.leadership-wrapper {
+    display:flex;
     width: 100%;
+    border: 1px solid var(--red);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: var(--black);
+    flex-wrap: wrap;
+    align-content: center;
+    min-height: 400px;
+}
+
+.leadership-title {
+    order: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 1px solid var(--red);
+    display:
+}
+
+.leadership-list {
+    order: 2;
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    max-width: 400px;
+  border: 1px solid var(--red);
+}
+
+
+/*EXPERIENCE*/
+.experience-wrapper {
+    display:flex;
+    width: 100%;
+    border: 1px solid var(--green)OFF;
+    margin-top: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#experience {
+    order: -3;
+    width: 100%;
+    margin-top: 0px;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.job-title {
+    color: var(--black);
+    font-weight: 600;
     margin: auto;
-}*/
-
-.profile {
-  order: 1;
-  width: 33%;
-  margin-top: 0;
-  align-self: auto;
-  border: solid0 var(--red);
 }
 
-@media (min-width: 768px) {
-  .profile {
-    min-width: 300px;
-  }
+.job-subtitle {
+    font-weight: 300;
+    Font-size: 16px;
+    font-style: oblique;
 }
 
-@media (max-width: 767px) {
-  .profile-containter {
-    flex-flow: column;
-    flex-direction: column;
-  }
-
-  .profile {
-    width: 800px;
-    margin-top: 0;
-    align-self: auto;
-  }
+.date {
+    font-weight: 300;
+    Font-size: 16px;
+    font-style: oblique;
 }
 
-.red-text {
-  color: var(--red);
-  text-align: center;
+.experience-list {
+    margin: auto;
+    max-width: 350px;
+    background-color: var(--white);
+    color: var(--black);
 }
 
-.strong-text {
-  text-align: center;
+.job {
+    width: 33%;
+    min-width: 400px;
+    min-height: 400px;
+    flex-grow: 50%;
+    display: block;
+    border: 1px solid red;
 }
 
-.profileimg {
-  border-radius: 50%;
+.job-1 {
+    order: 1;
+    
+}
+.job-2 {
+    order: 2;
+}
+.job-3 {
+    order: 3;
+}
+.job-4 {
+    order: 4;
+}
+.date {
+    margin-top: 20%;
 }
 
-.testimonials {
-  font-style: italic;
-  font-weight: 300;
+.job-title {
+    
 }
+
+.job-subtitle {
+    
+}
+
+/*EDUCATION*/
+.education-wrapper {
+    display:flex;
+    width: 100%;
+    border: 1px solid var(--red);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: var(--black);
+    flex-wrap: wrap;
+    align-content: center;
+    min-height: 300px;
+}
+
+.education-main-title {
+    order: 1; 
+    width: 100%;
+    text-align: center;
+    min-width: 400px;
+    flex-grow: 50%;
+    display: block;
+    border: 1px solid red;
+    border: 1px solid var(--red);
+
+}
+.education {
+    order: 2;
+    width: 100%;
+}
+
+.education-title {
+    order: 2;
+    color: var(--white);
+    font-weight: 600;
+    margin: auto;
+    
+}
+
+.education-subtitle {
+    order: 3;
+    color: var(--white);
+    font-weight: 300;
+    Font-size: 16px;
+    font-style: oblique;
+}
+
+.education-date {
+    order: 4;
+    color: var(--white);
+    font-weight: 300;
+    Font-size: 16px;
+    font-style: oblique;
+}
+
+
+/*CONTACT*/
+
+.contact-wrapper {
+    display:flex;
+    width: 100%;
+    border: 1px solid var(--green)OFF;
+    margin-top: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(white);
+}
+
+#contact {
+    background-color: var(--white);
+    color: var(--black);
+    width: 100%;
+}
+
+.contact-info {
+    background-color: var(--white);
+    color: var(--black);
+    width: 100%;
+}
+.icon-list {
+    list-style-type: none;
+}
+
+
+
