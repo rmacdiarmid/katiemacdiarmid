@@ -2,7 +2,7 @@
 
 :root {
   --black: #fff;
-  --white: #5f9ea0;
+  --white: #333;
   --red: #f00;
   --cadetblue: #5f9ea0;
   --dimgrey: #c6c6c6;
@@ -168,7 +168,7 @@ li {
   align-content: center;
   align-items: center;
   justify-content: center;
-  border: solid 1px red;
+  border: solid 0px red;
   flex-wrap: wrap;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -188,7 +188,7 @@ li {
 .hero-text {
     order: 2;
     flex-grow: 1;
-    border: 1px solid red;
+    border: 0px solid red;
     min-height: 400px;
     min-width: 425px;
 }
@@ -231,7 +231,7 @@ li {
 .skills-wrapper {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid var(--red);
+    border: 0px solid var(--red);
 }
 
 .skills-wrapper ul {
@@ -282,7 +282,7 @@ li {
 .leadership-wrapper {
     display:flex;
     width: 100%;
-    border: 1px solid var(--red);
+    border: 0px solid var(--red);
     margin-top: 0px;
     margin-bottom: 0px;
     background-color: var(--black);
@@ -297,7 +297,7 @@ li {
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
-    border: 1px solid var(--red);
+    border: 0px solid var(--red);
     display:
 }
 
@@ -310,7 +310,7 @@ li {
     margin-right: auto;
     margin-top: 0px;
     max-width: 400px;
-  border: 1px solid var(--red);
+  border: 0px solid var(--red);
 }
 
 
@@ -364,7 +364,7 @@ li {
     min-height: 400px;
     flex-grow: 50%;
     display: block;
-    border: 1px solid red;
+    border: 0px solid red;
 }
 
 .job-1 {
@@ -396,7 +396,7 @@ li {
 .education-wrapper {
     display:flex;
     width: 100%;
-    border: 1px solid var(--red);
+    border: 0px solid var(--red);
     margin-top: 0px;
     margin-bottom: 0px;
     background-color: var(--black);
@@ -412,8 +412,8 @@ li {
     min-width: 400px;
     flex-grow: 50%;
     display: block;
-    border: 1px solid red;
-    border: 1px solid var(--red);
+    border: 0px solid red;
+    border: 0px solid var(--red);
 
 }
 .education {
@@ -451,7 +451,7 @@ li {
 .contact-wrapper {
     display:flex;
     width: 100%;
-    border: 1px solid var(--green)OFF;
+    border: 0px solid var(--green)OFF;
     margin-top: 0px;
     flex-wrap: wrap;
     justify-content: center;
@@ -469,6 +469,12 @@ li {
     background-color: var(--white);
     color: var(--black);
     width: 100%;
+}
+
+.contact-info li {
+    list-style-type: none;
+    text-align: center;
+    
 }
 .icon-list {
     list-style-type: none;
