@@ -28,7 +28,7 @@ h1 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   border: 0 solid var(--black);
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 h2 {
@@ -101,6 +101,26 @@ li {
   padding: 30px;
   border: 1px solid var(--white);
 }
+
+.buffer {
+    position: relative;
+    border-top: 45px solid transparent;
+    margin: -80px 0 0;
+   -webkit-background-clip: padding-box;
+   -moz-background-clip: padding;
+   background-clip: padding-box;
+    z-index: -99;
+}
+
+.buffer:before {
+   content: "";
+   position: absolute;
+   top: -2px;
+   left: 0;
+   right: 0;
+   border-top: 2px solid transparent;
+}
+
 
 @media (max-width: 767px) {
   [id='#logo'] img {
@@ -278,7 +298,7 @@ li {
 }
 
 
-/* LEADERSHIP */
+/* Skill Set */
 
 
 .leadership-wrapper {
@@ -290,15 +310,16 @@ li {
     background-color: var(--black);
     flex-wrap: wrap;
     align-content: center;
+    justify-content: center;
     min-height: 400px;
+    height: 550px;
 }
 
 .leadership-title {
     order: 0;
-    width: 100%;
+    flex-basis: 100%;
     text-align: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: auto;
     border: 0px solid var(--red);
     display:
 }
@@ -404,12 +425,13 @@ li {
     background-color: var(--black);
     flex-wrap: wrap;
     align-content: center;
+    justify-content: center;
     min-height: 300px;
 }
 
 .education-main-title {
     order: 1; 
-    width: 100%;
+    flex-basis: 100%;
     text-align: center;
     min-width: 400px;
     flex-grow: 50%;
@@ -454,7 +476,7 @@ li {
     display:flex;
     width: 100%;
     border: 0px solid var(--green)OFF;
-    margin-top: 0px;
+    margin-top: 70px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -464,18 +486,33 @@ li {
 #contact {
     background-color: var(--white);
     color: var(--black);
-    width: 100%;
+    flex-basis: 100%;
 }
 
 .contact-info {
     background-color: var(--white);
     color: var(--black);
-    width: 100%;
+    flex-basis: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info ul {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items;
+    flex-basis: 100%;
 }
 
 .contact-info li {
     list-style-type: none;
     text-align: center;
+    margin-auto;
+    flex-basis: 100%;
+    margin-bottom: 100px;
     
 }
 .icon-list {
