@@ -253,36 +253,39 @@ li {
 .skills-wrapper {
     display: flex;
     flex-wrap: wrap;
-    border: 0px solid var(--red);
+    height: 100%;
 }
 
 .skills-wrapper ul {
+    flex-basis: 100%;
     background-color: var(--white);
 }
 .wrapper-dates {
   padding: 0;
-  margin: 0;
-  width: 100%;
+  margin: 50px 0px 0px 0px;
+  flex-basis: 100%;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 0px;
 }
 
 .skillstitle {
     order: 0;
-    width: 100%;
+    flex-basis: 100%;
     background-color: var(--white);
     color: white;
 }
 
-
 .flex-item {
-  flex: 10%;
+  flex-basis: auto;
   list-style: none;
   min-width: 150px;
   max-width: 250px;
-  margin: 5vh 3vw;
+  margin: 20px 30px;
   padding: 10px;
   text-align: center;
   background-color: var(--white);
@@ -297,22 +300,18 @@ li {
     
 }
 
-
 /* Skill Set */
-
 
 .leadership-wrapper {
     display:flex;
     width: 100%;
-    border: 0px solid var(--red);
     margin-top: 0px;
     margin-bottom: 0px;
-    background-color: var(--black);
+    background: var(--black);
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    min-height: 400px;
-    height: 550px;
+    height: 100%;
 }
 
 .leadership-title {
@@ -326,32 +325,33 @@ li {
 
 .leadership-list {
     order: 2;
-    width: 100%;
+    flex-basis: 100%;
     background-color: var(--black);
     color: var(--white);
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
+    margin-bottom: 50px;
     max-width: 400px;
-  border: 0px solid var(--red);
 }
 
 
 /*EXPERIENCE*/
 .experience-wrapper {
-    display:flex;
-    width: 100%;
-    border: 1px solid var(--green)OFF;
-    margin-top: 0px;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
+    align-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px;
 }
 
-#experience {
-    order: -3;
-    width: 100%;
+.experience {
+    flex-basis: 100%;
     margin-top: 0px;
+    margin-bottom: 0px;
     background-color: var(--white);
     color: var(--black);
 }
@@ -359,7 +359,6 @@ li {
 .job-title {
     color: var(--black);
     font-weight: 600;
-    margin: auto;
 }
 
 .job-subtitle {
@@ -382,33 +381,31 @@ li {
 }
 
 .job {
-    width: 33%;
-    min-width: 400px;
-    min-height: 400px;
-    flex-grow: 50%;
     display: block;
-    border: 0px solid red;
+    margin: 20px 20px 10px;
+    flex-basis: 350px;
 }
 
 .job-1 {
     order: 4;
-    
 }
 .job-2 {
     order: 1;
+
 }
 .job-3 {
     order: 3;
+
 }
 .job-4 {
     order: 2;
+
 }
 .date {
-    margin-top: 20%;
 }
 
 .job-title {
-    
+    margin-top: 0px;
 }
 
 .job-subtitle {
@@ -436,9 +433,6 @@ li {
     min-width: 400px;
     flex-grow: 50%;
     display: block;
-    border: 0px solid red;
-    border: 0px solid var(--red);
-
 }
 .education {
     order: 2;
@@ -459,6 +453,7 @@ li {
     font-weight: 300;
     Font-size: 16px;
     font-style: oblique;
+    margin-bottom: 50px;
 }
 
 .education-date {
@@ -475,46 +470,67 @@ li {
 .contact-wrapper {
     display:flex;
     width: 100%;
-    border: 0px solid var(--green)OFF;
-    margin-top: 70px;
+    border: 1px solid var(--green)OFF;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: var(white);
+    background-color: var(--white);
+    margin-top: 100px; 
+    margin-bottom: 200px;
 }
 
-#contact {
+.contact-me {
     background-color: var(--white);
     color: var(--black);
     flex-basis: 100%;
 }
 
 .contact-info {
-    background-color: var(--white);
-    color: var(--black);
-    flex-basis: 100%;
     display: flex;
+    background: none;
+    flex-basis: 100%;
     align-content: center;
     justify-content: center;
     align-items: center;
-}
-
-.contact-info ul {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items;
-    flex-basis: 100%;
+    flex-wrap: wrap;
 }
 
 .contact-info li {
+    display: block;
+    background-color: var(--lips);
     list-style-type: none;
     text-align: center;
-    margin-auto;
-    flex-basis: 100%;
-    margin-bottom: 100px;
+    margin: 20px 20px;
+    flex-basis: 175px;   
+    padding: 10px
     
 }
+/*
+.contact-info h3 {
+    color: var(--black);
+    font-weight: 400;
+    padding: 0px;
+    margin: 0px;
+}*/
+
+.sub-contact  {
+    background: none !important; 
+}
+
+.sub-contact a {
+    background: none !important;
+    border: 2px solid var(--black);
+    color: var(--black);
+    display: block;
+    margin: 0px;
+    padding: 20px;
+}
+
+.sub-contact a:hover {
+    background: var(--lips) !important;
+}
+
+
 .icon-list {
     list-style-type: none;
 }
