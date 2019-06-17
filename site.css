@@ -1,8 +1,8 @@
 /* myStyle.css */
 
 :root {
-  --black: #fff;
-  --white: #333;
+  --black: #333;
+  --white: #fff;
   --red: #f00;
   --cadetblue: #5f9ea0;
   --dimgrey: #c6c6c6;
@@ -96,10 +96,10 @@ li {
 
 .p-centered {
   text-align: center;
-  background-color: solid var(--black);
-  color: var(--white);
+  background-color: none;
+  color: var(--black);
   padding: 30px;
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
 }
 
 .buffer {
@@ -139,7 +139,7 @@ li {
 
 .topnav {
   overflow: hidden;
-  background-color: var(--black);
+  background-color: var(--white);
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
     width: 100%;
@@ -148,7 +148,7 @@ li {
 
 .topnav a {
   float: left;
-  color: var(--white);
+  color: var(--black);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -156,7 +156,7 @@ li {
 
 .topnav a:hover {
   background-color: var(--dimgrey);
-  color: var(--black);
+  color: var(--white);
 }
 
 .topnav a.active {
@@ -184,8 +184,8 @@ li {
 
 .hero-wrapper {
   display: flex;
-  background-color: var(--black);
   width: 100%;
+  height: 100vh;
   flex-flow: row;
   align-content: center;
   align-items: center;
@@ -194,6 +194,7 @@ li {
   flex-wrap: wrap;
   margin-top: 0px;
   margin-bottom: 0px;
+  overflow: hidden;
 }
 
 /* Hero */
@@ -202,15 +203,15 @@ li {
   flex-grow: 1;
   min-width: 350px;
   background-image: url('http://jackasstheology.com/wp-content/uploads/2019/05/katie_macdiarmid_headshot.jpg');
-  height: 100vh;
   background-position: center;
   background-size: cover;
+  height: 100%;
 }
 
 .hero-text {
     order: 2;
     flex-grow: 1;
-    border: 0px solid red;
+    border: 0px solid var(--lips);
     min-height: 400px;
     min-width: 425px;
 }
@@ -223,6 +224,8 @@ li {
 
 .hero-text h1 {
     margin-top: 0px;
+    color: var(--black);
+    background: none;
 }
 
 .hero-text .p-centered {
@@ -231,6 +234,7 @@ li {
 }
 
 .content {
+  background: none;
   order: 3;
   flex-grow: 1;
   max-width: 400px;
@@ -238,7 +242,7 @@ li {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  border: solid 0 var(--red);
+  border: solid 0px var(--lips);
 }
 @media (min-width: 768px) {
   .content {
@@ -248,17 +252,18 @@ li {
 }
 
 
-/*SKILLS*/
+/*Accomplishments*/
 
 .skills-wrapper {
+    background: var(--black);
     display: flex;
     flex-wrap: wrap;
     height: 100%;
+    border: 1px solid var(--lips);
 }
 
 .skills-wrapper ul {
     flex-basis: 100%;
-    background-color: var(--white);
 }
 .wrapper-dates {
   padding: 0;
@@ -288,8 +293,7 @@ li {
   margin: 20px 30px;
   padding: 10px;
   text-align: center;
-  background-color: var(--white);
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   color: var(--black);
   text-align: center;
 }
@@ -359,6 +363,7 @@ li {
 .job-title {
     color: var(--black);
     font-weight: 600;
+    flex-basis: 100%;
 }
 
 .job-subtitle {
